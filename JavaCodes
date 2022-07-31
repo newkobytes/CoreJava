@@ -1,0 +1,741 @@
+package test;
+
+public class DataTypeExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int num1 = 30;
+		int num2 = 20;
+		
+		int sum = num1 + num2;
+		int mul = num1 * num2;
+		float div = (float) num1 / num2;
+		 
+		System.out.println("The sum of two numbers is " + sum);
+		System.out.println("The mul of two numbers is " + mul);
+		System.out.println("The div of two numbers is " + div);
+		
+		String str1 = "Clean World Green World";
+		
+		System.out.println(str1);
+		System.out.println("The length of this string is " + str1.length());
+		
+		char ch1 = str1.charAt(0);
+		System.out.println("The first char is " + ch1);
+
+char chn = str1.charAt(str1.length() -1);
+		System.out.println("The last char is " + chn);
+
+
+		System.out.println("The string in upper case is " + str1.toUpperCase());
+		System.out.println("The string in lower case is " + str1.toLowerCase());
+
+	}
+
+}
+
+===============================================================
+
+package test;
+
+public class ArrayExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] array1 = {10,20,30,40,50,60};
+		
+		System.out.println("Total numbers are " + array1.length);
+	
+		System.out.println("The second num is " + array1[1]);
+		
+		System.out.println("The last num is " + array1[array1.length -1]);
+		
+		
+		String[] array2 = {"abc","pqr","xyz"};
+		
+		
+		
+		String str1 = "Clean World Green World";
+	
+		String[] array3 = str1.split(" "); // {"Clean","World","Green","World"}
+		
+		System.out.println("The first word is " + array3[0]);
+
+	}
+
+}
+
+===============================================
+
+
+package test;
+
+public class ConditionsExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int age = 17;
+		
+		if(age>=18) {
+			
+			System.out.println("I am eligible for voting");
+			
+		}else if(age == 17) {
+			
+			System.out.println("Sorry try again next year");
+			
+		} else {
+			
+			System.out.println("Not eligible for voting");
+		}
+
+	}
+
+}
+
+====================================================
+
+package test;
+
+import java.util.Scanner;
+
+public class EvenNumcheck {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter the Number: ");
+		
+		int num = scanner.nextInt();
+		
+		if(num%2==0) {
+			
+			System.out.println("Even Number");
+		}else {
+			
+			System.out.println("Odd Number");
+		}
+
+	}
+
+}
+
+
+========================================================
+
+package test;
+
+package test;
+
+public class LoopingExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		
+		int num =2;
+		
+		while(num<=10) {
+			
+			if(num==6) {
+				
+				num = num+2;
+				continue;
+			}
+				
+			System.out.println(num);	
+			num = num+2;
+			
+		}
+		
+		
+		System.out.println("After While Loop");
+		
+
+		// for loop
+		
+		for(int index=1;index<=10;index++) {
+			
+			if(index==6) {
+				continue;
+			}
+			
+			System.out.println(index);
+			
+		}
+		
+		System.out.println("After For Loop");
+		
+		int[] array1 = {10,20,30,40,50,60};
+		
+		for(int num1:array1) {
+			
+			System.out.println(num1);
+		}
+
+
+		// Write the logic to print all the array values using normal for loop
+
+for(int index=0;index<array1.length;index++) {
+			
+			System.out.println(array1[index]);
+		}
+		
+
+		
+	}
+
+}
+
+
+===========================================
+
+package test;
+
+public class PrimeNumCheck {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int num = 13;
+		boolean flag=true;
+		
+		for(int index=2;index<num;index++) {
+			
+			int rem = num%index;
+			
+			if(rem==0) {
+				
+				System.out.println("Num is not Prime");
+				flag = false;
+				break;
+			}
+			
+		}
+		
+		if(flag==true) {
+			System.out.println("Num is Prime");
+		}
+		
+		
+	}
+
+}
+
+
+================================
+
+package test;
+
+public class VowelsCheck {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "Clean World Green World";
+		
+		str = str.toLowerCase();
+		
+		//char[] array = {'a' , 'p' ,'e' , 'x'};
+		
+		int count = 0;
+		
+		for(int index=0;index<str.length();index++) {
+			
+			char ch = str.charAt(index);
+			
+			
+			if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u') {
+				count++;
+			}
+			
+		}
+		
+		System.out.println("The Vowel count is " + count);
+
+	}
+
+}
+
+=====================================
+
+package test;
+
+public class SwitchExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "Clean World Green World";
+		int count =0;
+		
+		for(int index=0;index<str.length();index++) {
+			
+			char ch = str.charAt(index);
+			
+			switch(ch) {
+			
+				case 'a':
+				case 'e':
+				case 'i':
+				case 'o':
+				case 'u':
+					count++;
+					break;
+						
+			}
+			
+		}
+		
+		System.out.println("Total vowels are " + count);
+
+	}
+
+}
+
+=====================================
+
+package test;
+
+public class ReverseExample {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "Clean World Green World";
+		
+		String result = "";
+		
+		for(int index = str.length() -1 ; index>=0;index--) {
+			
+			char ch = str.charAt(index);
+			result = result + ch;
+			
+		}
+		
+		System.out.println("The result string is " + result);
+
+int num = 456789;
+		
+		int res = 0;
+		
+		while(num>0) {
+			
+			int rem = num%10; //4
+			
+			res = res*10 + rem; //987654
+			
+			num = num/10;  //0
+			
+		}
+		
+		System.out.println("The resulted num is " + res);
+
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+===============================
+
+package test;
+
+public class PatternExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		for(int i=1;i<=5;i++) {
+			
+			int j = 1;
+			
+			while(j<=i) {
+				System.out.print("*");
+				j++;
+			}
+			
+			System.out.println();
+		}
+
+	}
+
+}
+
+
+==============================
+
+package test;
+
+public class ExceptionExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] array = {3,4,5};
+		
+		int num =10;
+		
+		
+		try {
+			
+			//int res = num/0;
+			
+			System.out.println(array[2]);
+			
+		} catch(ArrayIndexOutOfBoundsException e ) {
+			
+			System.out.println("Inside the array catch block");
+			
+			
+		} catch(ArithmeticException e ) {
+			
+			System.out.println("Inside the arithmetic catch block");
+			
+		} finally {
+			
+			System.out.println("Inside finally ");
+		}
+		 
+		
+		System.out.println("After exception");
+		
+			
+
+	}
+
+}
+
+===========================================
+
+package oops;
+
+public class Employee {
+	
+	public String Name;
+	public int EmpId;
+	public String Department;
+	
+	public Employee() {
+		
+		System.out.println("Default Cons");
+		
+	}
+	
+	public Employee(String P1, int P2, String P3) {
+		
+		Name = P1;
+		EmpId=P2;
+		Department = P3;
+		
+	}
+	
+	
+	public void Display() {
+		
+		System.out.println(Name);
+		System.out.println(EmpId);
+		System.out.println(Department);
+	}
+
+
+
+=======================================================
+
+package oops;
+
+public class OverLoadingExample {
+	
+	
+	public int GetArea(int l, int b) {
+		
+		return l*b;
+	}
+	
+	public int GetArea(int l) {
+		
+		return l*l;
+	}
+	
+	public float GetArea(float l) {
+		
+		return l*l;
+	}
+
+}
+
+===================================================
+
+
+
+
+package oops;
+
+public class RunnerClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Employee E1 = new Employee();
+		
+		E1.Name = "Mike";
+		E1.EmpId = 1000;
+		E1.Department = "HR";
+		E1.Display();
+		
+		Employee E2 = new Employee("Jack", 1001, "Finance");
+		E2.Display();
+		
+		Bank B = new Bank();
+		
+		B.DisplayBalance();
+		int Bal = B.GetBalance();
+		B.AccountNum = 500;
+		
+		System.out.println("The Balance is " + B.GetBalance());
+		System.out.println("The Balance is " + Bal);
+		
+		BOABank B1 = new BOABank();
+		
+		B1.CCBalance();
+		B1.DisplayBalance();
+		
+		B1.AccountNum =100;
+		
+		OverLoadingExample obj =new OverLoadingExample();
+		
+		int RecArea = obj.GetArea(3, 4);
+		
+		int SqArea = obj.GetArea(4);
+
+	}
+
+}
+
+
+=================================================
+
+package collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArrayListExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		String[] array1 = {"abc","pqr","xyz","asdasd","rtert"};
+		
+		
+		ArrayList<String> list1 = new ArrayList<String>();
+		
+		list1.add("John");
+		list1.add("Leeana");
+		list1.add("Priyanka");
+		list1.add("Rohan");
+		list1.add("Laurence");
+		
+		System.out.println("List is this " + list1);
+		System.out.println("Size of Array List is " + list1.size());
+		
+		list1.remove(1);
+		
+		System.out.println("List is this after removing Leeana " + list1);
+		System.out.println("Size of Array List is " + list1.size());
+		
+		System.out.println("The data at 4th position is " + list1.get(3));
+		
+		list1.set(0, "James");
+		System.out.println("List is this after replacing John " + list1);
+		
+		list1.add(1, "Leeana");
+		System.out.println("List is this after adding Leeana again " + list1);
+		
+		Collections.sort(list1);
+		System.out.println("List is this after sort " + list1);
+		
+		
+		for(int index=0;index<list1.size();index++) {
+			
+			System.out.println(list1.get(index));
+		}
+		
+		for(String name:list1) {
+			
+			System.out.println(name);
+			
+		}
+		
+		for(int index=0;index<list1.size();index++) {
+			if(list1.get(index).equals("Priyanka")){
+	            System.out.println(index);
+	            break;
+	        }
+		}
+
+	}
+
+}
+
+===========================================
+
+package collections;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class LinkedListExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		LinkedList<String> list1 = new LinkedList<String>();
+		
+		list1.add("John");
+		list1.add("Leeana");
+		list1.add("Priyanka");
+		list1.add("Rohan");
+		list1.add("Laurence");
+		
+		System.out.println("List is this " + list1);
+		System.out.println("Size of Array List is " + list1.size());
+
+	}
+
+}
+
+==========================================================
+
+
+package collections;
+
+import java.util.HashMap;
+
+public class MapExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		HashMap<Integer,String> map1 = new HashMap<Integer,String>();
+		
+		
+		map1.put(1, "Matt");
+		map1.put(2, "Kate");
+		map1.put(3, "John");
+		map1.put(4, "Kathy");
+		map1.put(5, "Matt");
+		map1.put(2, "Arpita");
+		map1.put(100, "Sachin");
+	
+		System.out.println(map1);
+		
+		System.out.println("Data at 4th key is " + map1.get(4));
+		System.out.println("Data at 100th key is " + map1.get(100));
+		
+		map1.remove(100);
+		System.out.println(map1);
+		
+		for (Integer key: map1.keySet() ) {
+			
+			System.out.println("Key is : " +  key);
+			System.out.println("Value is : " + map1.get(key));
+			
+		}
+		
+		
+
+	}
+
+}
+
+
+
+
+
+======================================================
+
+package collections;
+
+import java.util.HashMap;
+
+public class WordOccurance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str1 = "Clean World Green World Love World";
+		
+		String [] words = str1.split(" ");
+		
+		HashMap<String, Integer> map1 = new HashMap<String, Integer>();
+		
+		
+		for(String word: words) {
+			
+			if(map1.get(word) == null) {
+				
+				map1.put(word, 1);
+			}else {
+				
+				int oldOccu = map1.get(word);
+				
+				map1.put(word, oldOccu+1);
+			}
+				
+		}
+		
+		System.out.println(map1);
+
+	}
+
+}
+
+===================================================
+
+public class WordOccurrences2 {
+    public static void main(String[] args) {
+        // Counts number of times each word occurs in a LARGER string
+        String str = "Clean World Green Green World Love World";
+        str = str.toUpperCase();
+        String[] arr1 = str.split(" ");
+        
+        Arrays.sort(arr1); //Sort array.
+        
+        int count = 0;
+        for(int j=0; j<arr1.length; j++) {
+            count++;
+            if(j < arr1.length-1 && arr1[j].equals(arr1[j+1])) {
+                continue;
+            }else {
+                if(count > 0) {
+                    System.out.print("The word "+arr1[j]+" occurs "+count);
+                    if(count == 1) {
+                        System.out.println(" time.");                    
+                    }else if(count > 1) {
+                        System.out.println(" times.");                    
+                    }
+                    count = 0;
+                }
+                
+            }
+                
+        }
+    }    
+}
+
+
